@@ -27,17 +27,15 @@
   <main>
     <div class="container">
       <section class="main-section">
-        <div class="top-border">
-          <h2>
-            MANAGE <span>STUDENTS</span>
-          </h2>
-          <div class="btns">
-            <button class="btn btn-add">Add student</button>
-            <button class="btn btn-refresh">Refresh table</button>
-            <button class="btn btn-delete">Delete</button>
-          </div>
+        <h2 class="main-section-header">
+          Manage <span>Students</span>
+        </h2>
+        <div class="btns">
+          <button class="btn btn-refresh">Refresh</button>
+          <button class="btn btn-add">Add student</button>
+          <button class="btn btn-delete">Delete</button>
+        </div>
       </section>
-    </div>
     </div>
   </main>
 </body>

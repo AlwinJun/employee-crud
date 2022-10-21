@@ -1,0 +1,10 @@
+body{
+  background-color: hsl(0, 0%, 96%);
+  color: #222;
+}
+
+.container{
+  width: min(95%, 70rem);
+  margin:2.5rem auto 0;
+  outline: 1px solid red;
+}
