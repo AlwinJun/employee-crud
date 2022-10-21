@@ -1,0 +1,69 @@
+.btns{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .8rem;
+
+  .btn{
+    padding: .6rem 0;
+    width: 9rem;
+    background-color: red;
+    border-radius: 13rem;
+    color: #fff;
+
+    &:hover{
+      cursor: pointer;
+    }
+
+    i{
+      margin-right: .4rem;
+    }
+
+    &-refresh{
+      margin-right: auto;
+      background-color: hsl(188, 83%, 43%);
+
+      &:hover{
+        background-color: hsl(188, 95%, 33%);
+      }
+    }
+
+    &-add{
+      background-color: hsl(123, 96%, 40%);
+
+      &:hover {
+          background-color: hsl(123, 96%, 45%);
+        }
+    }
+
+    &-delete{
+      background-color: transparent;
+      border: 1px solid red;
+      color: red;
+
+      &:hover{
+        background-color: red;
+        color: white;
+      }
+    }
+
+
+    &-deleted{
+      padding: .8rem 0;
+      width: 4.5rem;
+      background-color: transparent;
+      font-size: 2.3rem;
+      color: red;
+      //border: 1px solid red;
+
+      i{
+        margin: auto;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+

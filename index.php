@@ -31,9 +31,10 @@
           Manage <span>Students</span>
         </h2>
         <div class="btns">
-          <button class="btn btn-refresh">Refresh</button>
-          <button class="btn btn-add">Add student</button>
-          <button class="btn btn-delete">Delete</button>
+          <button class="btn btn-refresh"><i class="fa-solid fa-arrows-rotate"></i>Refresh</button>
+          <button class="btn btn-add"><i class="fa-solid fa-plus"></i></i>Add student</button>
+          <button class="btn btn-delete"><i class="fa-solid fa-minus"></i>Delete</button>
+          <button class="btn btn-deleted hidden"><i class="fa-solid fa-trash"></i></button>
         </div>
       </section>
     </div>
