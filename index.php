@@ -10,6 +10,8 @@
   <script src="https://kit.fontawesome.com/25c871887e.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="dist/style.css">
+
+  </style>
 </head>
 
 <body>
@@ -26,16 +28,57 @@
   </header>
   <main>
     <div class="container">
-      <section class="main-section">
-        <h2 class="main-section-header">
-          Manage <span>Students</span>
+      <section class="section-cta">
+        <h2 class="section-cta-title">
+          Manage <span>Employees</span>
         </h2>
         <div class="btns">
           <button class="btn btn-refresh"><i class="fa-solid fa-arrows-rotate"></i>Refresh</button>
-          <button class="btn btn-add"><i class="fa-solid fa-plus"></i></i>Add student</button>
-          <button class="btn btn-delete"><i class="fa-solid fa-minus"></i>Delete</button>
-          <button class="btn btn-deleted hidden"><i class="fa-solid fa-trash"></i></button>
+          <button class="btn btn-add"><i class="fa-solid fa-plus"></i></i>Add Employee</button>
+          <button class="btn btn-delete"><i class="fa-solid fa-minus"></i>Delete All</button>
+          <!-- <button class="btn btn-deleted hidden"><i class="fa-solid fa-trash"></i></button> -->
         </div>
+      </section>
+      <section class="section-table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Job Title</th>
+              <th>Created at</th>
+              <th>Updated at</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Alwin</td>
+              <td>Jun</td>
+              <td>Male</td>
+              <td>@emfasffsfasfail</td>
+              <td>Web Developer</td>
+              <td>24</td>
+              <td>25</td>
+              <td>Edit | Delete</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Alwin</td>
+              <td>Jun</td>
+              <td>Male</td>
+              <td>@email</td>
+              <td>Web Developer</td>
+              <td>24</td>
+              <td>25</td>
+              <td>Edit | Delete</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </div>
   </main>
