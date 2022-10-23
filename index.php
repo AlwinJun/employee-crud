@@ -77,6 +77,17 @@
               <td>25</td>
               <td>Edit | Delete</td>
             </tr>
+            <tr>
+              <td>1</td>
+              <td>Alwin</td>
+              <td>Jun</td>
+              <td>Male</td>
+              <td>@email</td>
+              <td>Web Developer</td>
+              <td>24</td>
+              <td>25</td>
+              <td>Edit | Delete</td>
+            </tr>
           </tbody>
         </table>
       </section>
