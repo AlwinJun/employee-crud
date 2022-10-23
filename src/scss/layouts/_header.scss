@@ -1,6 +1,6 @@
 @use '../abstracts/' as *;
 
-.header{
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,72 +9,56 @@
   color: #fff;
 
   &-left {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-    }
-
-  &-logo{
-    font-size: 2.3rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
   }
 
-  h1{
-    margin-left: 1.5rem;
+  h1 {
+    margin-left: 1.7rem;
     transform: rotateY(180deg);
-    letter-spacing: 4px;
-    text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #919191,
-        1px 10px 1px #919191,
-        1px 18px 6px rgba(16, 16, 16, 0.4),
-        1px 22px 10px rgba(16, 16, 16, 0.2),
-        1px 25px 35px rgba(16, 16, 16, 0.2),
-        1px 30px 60px rgba(16, 16, 16, 0.4);
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
+      1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+      1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
   }
 
-    &-right {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-  &-notif{
+  &-notif {
     background-color: transparent;
   }
 
-  &-notify{
+  &-notify {
     margin-right: 1.8rem;
     color: #fff;
     font-size: 1.2rem;
     position: relative;
 
-    &::after{
+    &::after {
       content: attr(data-number);
       position: absolute;
       inset: -2px -5px auto auto;
-      padding: 3px 1px ;
+      padding: 3px 1px;
       background-color: red;
-      font-size: .5rem;
+      font-size: 0.5rem;
       border-radius: 50%;
     }
   }
 
   &-user {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     letter-spacing: 1px;
   }
 
   &-icon {
-    padding: .5rem .7rem;
+    padding: 0.5rem 0.7rem;
     font-size: 1rem;
     color: $clr-accent-primary;
     border-radius: 50%;
   }
 }
-
