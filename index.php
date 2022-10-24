@@ -31,6 +31,7 @@
         <h2 class="section-cta-title">
           Manage <span>Employees</span>
         </h2>
+        <!-- ADD, REFREESH, DELETE ALL Button -->
         <div class="btns">
           <button class="btn btn-refresh" title="Refresh table"><i class="fa-solid fa-arrows-rotate"></i>Refresh Table</button>
           <button class="btn btn-add" title="Add new employee"><i class="fa-solid fa-plus"></i></i>Add Employee</button>
@@ -38,6 +39,7 @@
           <!-- <button class="btn btn-deleted hidden"><i class="fa-solid fa-trash"></i></button> -->
         </div>
       </section>
+      <!-- TABLE -->
       <section class="section-table">
         <table>
           <thead>
@@ -103,6 +105,18 @@
         </table>
       </section>
     </div>
+    <section class="modal">
+      <div class="modal-container">
+        <div class="modal-card">
+          <form action="" method="POST">
+            <div class="inputs">
+              <input type="text" name="" value="" required>
+              <span>Enter first name</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 
