@@ -108,6 +108,8 @@
     <section class="modal">
       <div class="modal-container">
         <div class="modal-card">
+          <div class="icon"><i class="fa-solid fa-users-between-lines"></i></div>
+          <span class="modal-close">&times;</span>
           <form action="" method="POST">
             <div class="inputs">
               <input type="text" name="" value="" required>
