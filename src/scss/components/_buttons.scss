@@ -46,19 +46,30 @@ button:hover {
 .action {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  gap: 0.8rem;
   align-items: center;
   font-size: 1rem;
 
-  // button {
-  //   padding: 0.2rem 0.8rem;
-  //   border-radius: 12rem;
-  //   border: 1px solid red;
-  // }
+  button {
+    padding: 0.2rem 0.8rem;
+    border-radius: 12rem;
+    border-width: 1px;
+    border-style: solid;
+  }
 
   &-gap {
     width: 2px;
     height: 1.7rem;
     background-color: #ddd;
+  }
+
+  &-edit {
+    border-color: hsl(158, 75%, 45%);
+    color: hsl(158, 75%, 45%);
+  }
+
+  &-delete {
+    background-color: hsl(0, 99%, 46%);
+    color: #fff;
   }
 }

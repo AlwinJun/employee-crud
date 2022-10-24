@@ -66,7 +66,7 @@
               <td class="action">
                 <button class="action-edit" title="Edit record"><i class="fa-regular fa-pen-to-square"></i></button>
                 <span class="action-gap"></span>
-                <button class="action-delete" title="Delete record"><i class="fa-solid fa-trash"></i></button>
+                <button class="action-delete" title="Delete record"><i class="fa-solid fa-trash-can"></i></button>
               </td>
             </tr>
             <tr>
@@ -78,7 +78,11 @@
               <td>Salary</td>
               <td>24</td>
               <td>25</td>
-              <td>Edit | Delete</td>
+              <td class="action">
+                <button class="action-edit" title="Edit record"><i class="fa-regular fa-pen-to-square"></i></button>
+                <span class="action-gap"></span>
+                <button class="action-delete" title="Delete record"><i class="fa-solid fa-trash-can"></i></button>
+              </td>
             </tr>
             <tr>
               <td>1</td>
@@ -89,7 +93,11 @@
               <td>50000</td>
               <td>24</td>
               <td>25</td>
-              <td>Edit | Delete</td>
+              <td class="action">
+                <button class="action-edit" title="Edit record"><i class="fa-regular fa-pen-to-square"></i></button>
+                <span class="action-gap"></span>
+                <button class="action-delete" title="Delete record"><i class="fa-solid fa-trash-can"></i></button>
+              </td>
             </tr>
           </tbody>
         </table>
