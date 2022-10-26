@@ -108,12 +108,19 @@
     <section class="modal">
       <div class="modal-container">
         <div class="modal-card">
-          <div class="icon"><i class="fa-solid fa-users-between-lines"></i></div>
           <span class="modal-close">&times;</span>
           <form action="" method="POST">
             <div class="inputs">
-              <input type="text" name="" value="" required>
-              <span>Enter first name</span>
+              <input class="modal-input" type="text" name="" value="" required>
+              <label class="inputs-placeholder">Enter first name</label>
+            </div>
+            <div class="inputs">
+              <input class="modal-input" type="text" name="" value="" required>
+              <label class="inputs-placeholder">Enter first name</label>
+            </div>
+            <div class="inputs">
+              <input class="modal-input" type="text" name="" value="" required>
+              <label class="inputs-placeholder">Enter first name</label>
             </div>
           </form>
         </div>
