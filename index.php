@@ -109,19 +109,19 @@
       <div class="modal-container">
         <div class="modal-card">
           <span class="modal-close">&times;</span>
-          <form action="" method="POST">
-            <div class="inputs">
+          <form action="" method="POST" autocomplete="off">
+            <label class="inputs">
               <input class="modal-input" type="text" name="" value="" required>
-              <label class="inputs-placeholder">Enter first name</label>
-            </div>
-            <div class="inputs">
+              <span class="inputs-placeholder">First Name</span>
+            </label>
+            <label class="inputs">
               <input class="modal-input" type="text" name="" value="" required>
-              <label class="inputs-placeholder">Enter first name</label>
-            </div>
-            <div class="inputs">
+              <span class="inputs-placeholder">Last Name</span>
+            </label>
+            <label class="inputs">
               <input class="modal-input" type="text" name="" value="" required>
-              <label class="inputs-placeholder">Enter first name</label>
-            </div>
+              <span class="inputs-placeholder">Email</span>
+            </label>
           </form>
         </div>
       </div>

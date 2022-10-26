@@ -36,12 +36,14 @@ h2 {
 
 .modal {
   .inputs {
-    &-place-holder {
+    font-size: 0.9rem;
+
+    &-placeholder {
       font-size: 0.9rem;
     }
   }
 
   &-input {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }

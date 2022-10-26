@@ -13,8 +13,8 @@
     display: flex;
     flex-direction: column;
     padding: 0.7rem 2rem;
-    margin: 3.5rem auto 0;
-    width: min(90%, 35rem);
+    margin: 3rem auto 0;
+    width: min(90%, 30rem);
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
     border-top: 5px solid $clr-accent-primary;
@@ -23,33 +23,63 @@
 
   &-close {
     align-self: flex-end;
-    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: lighter;
     color: hsl(0, 100%, 50%);
   }
 
   .inputs {
     position: relative;
 
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      // height: 5px;
+      width: min(95%, 22rem);
+      outline: 2px solid red;
+      //background-color: $clr-accent-primary;
+      transform: scaleX(0.5);
+
+      transition: all 0.3s linear;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+
     &-placeholder {
       position: absolute;
-      top: 0.3rem;
-      left: 0.2rem;
-      color: #555;
+      top: 0.8rem;
+      left: 0.5rem;
+      color: hsl(0, 0%, 53%);
+
+      transition: all 0.2s linear;
     }
   }
 
   &-input {
+    position: relative;
     display: block;
-    width: 75%;
-    padding: 0.3rem 0.2rem 0.1rem;
-    margin-bottom: 2rem;
-    background: transparent;
+    appearance: none;
+    width: min(95%, 22rem);
+    padding: 0.9rem 0.5rem 0.4rem;
+    margin-bottom: 2.3rem;
+    background: hsl(0, 0, 97%);
     color: hsl(0, 0%, 0%);
     border: none;
-    border-bottom: 1px solid hsl(0, 0%, 13%);
+    border-bottom: 1px solid hsl(0, 0%, 38%);
+    border-radius: 3px;
+    outline: none;
 
-    &:focus {
-      outline: none;
+    &:focus + .inputs-placeholder,
+    &:valid + .inputs-placeholder {
+      top: -0.8rem + -0.15rem;
+      left: 0;
+      font-size: 0.7rem;
+      color: hsl(0, 0%, 0%);
     }
   }
 }
