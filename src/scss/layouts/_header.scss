@@ -36,7 +36,6 @@
   &-notify {
     margin-right: 1.8rem;
     color: #fff;
-    font-size: 1.2rem;
     position: relative;
 
     &::after {
@@ -45,7 +44,6 @@
       inset: -2px -5px auto auto;
       padding: 3px 1px;
       background-color: red;
-      font-size: 0.5rem;
       border-radius: 50%;
     }
   }
@@ -57,7 +55,6 @@
 
   &-icon {
     padding: 0.5rem 0.7rem;
-    font-size: 1rem;
     color: $clr-accent-primary;
     border-radius: 50%;
   }

@@ -1,17 +1,47 @@
-h1{
+h1 {
   font-size: 3.8rem;
   font-weight: 700;
 }
 
-h2{
+h2 {
   margin-bottom: 2.3rem;
   font-size: 1.8rem;
   font-weight: 600;
 }
 
-.header-user{
-  margin-right: 2rem;
-  font-size: 1.3rem;
-  font-weight: 400;
-  text-transform: capitalize;
+.header {
+  &-notify {
+    font-size: 1.2rem;
+
+    &::after {
+      font-size: 0.5rem;
+    }
+  }
+
+  &-user {
+    margin-right: 2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+
+  &-icon {
+    font-size: 1rem;
+  }
+}
+
+.action {
+  font-size: 1rem;
+}
+
+.modal {
+  .inputs {
+    &-place-holder {
+      font-size: 0.9rem;
+    }
+  }
+
+  &-input {
+    font-size: 1rem;
+  }
 }
