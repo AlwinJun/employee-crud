@@ -113,14 +113,17 @@
             <label class="inputs">
               <input class="modal-input" type="text" name="" value="" required>
               <span class="inputs-placeholder">First Name</span>
+              <span class="inputs-outline"></span>
             </label>
             <label class="inputs">
               <input class="modal-input" type="text" name="" value="" required>
               <span class="inputs-placeholder">Last Name</span>
+              <span class="inputs-outline"></span>
             </label>
             <label class="inputs">
               <input class="modal-input" type="text" name="" value="" required>
               <span class="inputs-placeholder">Email</span>
+              <span class="inputs-outline"></span>
             </label>
           </form>
         </div>

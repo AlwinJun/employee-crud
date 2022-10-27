@@ -14,7 +14,7 @@
     flex-direction: column;
     padding: 0.7rem 2rem;
     margin: 3rem auto 0;
-    width: min(90%, 30rem);
+    width: min(90%, 28rem);
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
     border-top: 5px solid $clr-accent-primary;
@@ -29,26 +29,17 @@
     color: hsl(0, 100%, 50%);
   }
 
+  form {
+    width: min(95%, 22rem);
+  }
+
   .inputs {
     position: relative;
-
-    &::after {
-      position: absolute;
-      content: '';
-      bottom: 0;
-      left: 0;
-      // height: 5px;
-      width: min(95%, 22rem);
-      outline: 2px solid red;
-      //background-color: $clr-accent-primary;
-      transform: scaleX(0.5);
-
-      transition: all 0.3s linear;
-    }
-
-    &:hover::after {
-      transform: scaleX(1);
-    }
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5rem;
+    //outline: 1px solid red;
 
     &-placeholder {
       position: absolute;
@@ -56,30 +47,45 @@
       left: 0.5rem;
       color: hsl(0, 0%, 53%);
 
-      transition: all 0.2s linear;
+      transition: top 0.2s ease, left 0.2s ease, color 0.2s ease, font-size 0.2s ease;
+    }
+
+    &-outline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1.5px;
+      width: 100%;
+      background-color: $clr-accent-primary;
+      transform: scaleX(0.1);
+      opacity: 0;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
   }
 
   &-input {
-    position: relative;
-    display: block;
-    appearance: none;
-    width: min(95%, 22rem);
+    width: 100%;
     padding: 0.9rem 0.5rem 0.4rem;
-    margin-bottom: 2.3rem;
     background: hsl(0, 0, 97%);
     color: hsl(0, 0%, 0%);
     border: none;
-    border-bottom: 1px solid hsl(0, 0%, 38%);
-    border-radius: 3px;
+    border-bottom: 1px solid hsl(0, 0%, 70%);
+    border-radius: 5px 5px 0 0;
+    appearance: none;
+    //outline: 1px solid red;
     outline: none;
 
     &:focus + .inputs-placeholder,
     &:valid + .inputs-placeholder {
-      top: -0.8rem + -0.15rem;
-      left: 0;
-      font-size: 0.7rem;
+      top: -0.95rem;
+      left: 0.3rem;
+      font-size: small;
       color: hsl(0, 0%, 0%);
+    }
+
+    &:focus ~ .inputs-outline {
+      opacity: 1;
+      transform: scaleX(1);
     }
   }
 }
