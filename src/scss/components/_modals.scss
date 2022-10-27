@@ -38,7 +38,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 2.3rem;
     //outline: 1px solid red;
 
     &-placeholder {
@@ -79,13 +79,14 @@
     &:valid + .inputs-placeholder {
       top: -0.95rem;
       left: 0.3rem;
-      font-size: small;
+      font-size: smaller;
       color: hsl(0, 0%, 0%);
     }
 
     &:focus ~ .inputs-outline {
       opacity: 1;
       transform: scaleX(1);
+      transform-origin: center;
     }
   }
 }

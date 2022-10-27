@@ -33,9 +33,9 @@
         </h2>
         <!-- ADD, REFREESH, DELETE ALL Button -->
         <div class="btns">
-          <button class="btn btn-refresh" title="Refresh table"><i class="fa-solid fa-arrows-rotate"></i>Refresh Table</button>
-          <button class="btn btn-add" title="Add new employee"><i class="fa-solid fa-plus"></i></i>Add Employee</button>
-          <button class="btn btn-delete" title="Delete all table records"><i class="fa-solid fa-minus"></i>Delete All</button>
+          <button class="btn btn-refresh" type="submit" title="Refresh table"><i class="fa-solid fa-arrows-rotate"></i>Refresh Table</button>
+          <button class="btn btn-add" type="submit" title="Add new employee"><i class="fa-solid fa-plus"></i></i>Add Employee</button>
+          <button class="btn btn-delete" type="submit" title="Delete all table records"><i class="fa-solid fa-minus"></i>Delete All</button>
           <!-- <button class="btn btn-deleted hidden"><i class="fa-solid fa-trash"></i></button> -->
         </div>
       </section>
@@ -121,15 +121,31 @@
               <span class="inputs-outline"></span>
             </label>
             <label class="inputs">
-              <input class="modal-input" type="text" name="" value="" required>
+              <input class="modal-input" type="email" name="" value="" required>
               <span class="inputs-placeholder">Email</span>
               <span class="inputs-outline"></span>
             </label>
+            <label class="inputs">
+              <input class="modal-input" type="text" name="" value="" required>
+              <span class="inputs-placeholder">Job Title</span>
+              <span class="inputs-outline"></span>
+            </label>
+            <label class="inputs">
+              <input class="modal-input" type="text" name="" value="" required>
+              <span class="inputs-placeholder">Salary</span>
+              <span class="inputs-outline"></span>
+            </label>
+            <div class="modal-btn">
+              <button class="modal-add" type="submit">Add Employee</button>
+              <button class="modal-add-more" type="submit">Add more</button>
+              <button class="modal-update" type="submit">Update</button>
+            </div>
           </form>
         </div>
       </div>
     </section>
   </main>
+
 </body>
 
 </html>
