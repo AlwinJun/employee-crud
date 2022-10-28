@@ -137,8 +137,8 @@
             </label>
             <div class="modal-btn">
               <button class="modal-add" type="submit">Add Employee</button>
-              <button class="modal-add-more" type="submit">Add more</button>
-              <button class="modal-update" type="submit">Update</button>
+              <button class="modal-add-more hidden" type="submit">Add More</button>
+              <button class="modal-update hidden" type="submit">Update Record</button>
             </div>
           </form>
         </div>
