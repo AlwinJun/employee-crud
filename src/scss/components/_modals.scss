@@ -35,6 +35,13 @@
     width: min(95%, 22rem);
   }
 
+  .even-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .inputs {
     position: relative;
     display: flex;

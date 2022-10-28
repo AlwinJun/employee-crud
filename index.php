@@ -110,16 +110,18 @@
         <div class="modal-card">
           <span class="modal-close">&times;</span>
           <form action="" method="POST" autocomplete="off">
-            <label class="inputs">
-              <input class="modal-input" type="text" name="" value="" required>
-              <span class="inputs-placeholder">First Name</span>
-              <span class="inputs-outline"></span>
-            </label>
-            <label class="inputs">
-              <input class="modal-input" type="text" name="" value="" required>
-              <span class="inputs-placeholder">Last Name</span>
-              <span class="inputs-outline"></span>
-            </label>
+            <div class="even-row">
+              <label class="inputs">
+                <input class="modal-input" type="text" name="" value="" required>
+                <span class="inputs-placeholder">First Name</span>
+                <span class="inputs-outline"></span>
+              </label>
+              <label class="inputs">
+                <input class="modal-input" type="text" name="" value="" required>
+                <span class="inputs-placeholder">Last Name</span>
+                <span class="inputs-outline"></span>
+              </label>
+            </div>
             <label class="inputs">
               <input class="modal-input" type="email" name="" value="" required>
               <span class="inputs-placeholder">Email</span>
