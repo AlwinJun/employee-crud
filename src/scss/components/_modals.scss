@@ -1,5 +1,6 @@
 @use '../abstracts/' as *;
 
+//Hidden by default
 .modal {
   position: fixed;
   top: 0;
@@ -25,10 +26,13 @@
     align-self: flex-end;
     padding: 0.5rem;
     margin-bottom: 1.5rem;
+    background: transparent;
     font-size: 2.5rem;
     font-weight: lighter;
     color: hsl(0, 100%, 50%);
     cursor: pointer;
+    border: none;
+    outline: none;
   }
 
   form {
@@ -89,7 +93,7 @@
       top: -0.95rem;
       left: 0.3rem;
       font-size: smaller;
-      color: hsl(0, 0%, 0%);
+      color: $clr-accent-primary;
     }
 
     &:focus ~ .inputs-outline {

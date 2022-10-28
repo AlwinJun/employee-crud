@@ -105,10 +105,10 @@
         </table>
       </section>
     </div>
-    <section class="modal">
+    <section class="modal hidden">
       <div class="modal-container">
         <div class="modal-card">
-          <span class="modal-close">&times;</span>
+          <button class="modal-close">&times;</button>
           <form action="" method="POST" autocomplete="off">
             <div class="even-row">
               <label class="inputs">
@@ -148,6 +148,7 @@
     </section>
   </main>
 
+  <script src="src/js/main.js"></script>
 </body>
 
 </html>
