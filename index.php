@@ -109,7 +109,7 @@
       <div class="modal-container">
         <div class="modal-card">
           <button class="modal-close">&times;</button>
-          <form action="" method="POST" autocomplete="off">
+          <form action="" method="GET" autocomplete="off">
             <div class="even-row">
               <label class="inputs">
                 <input class="modal-input" type="text" name="" value="" required>
@@ -139,7 +139,7 @@
             </label>
             <div class="modal-btn">
               <button class="modal-add" type="submit">Add Employee</button>
-              <button class="modal-add-more hidden" type="submit">Add More</button>
+              <!-- <button class="modal-add-more hidden" type="submit">Add More</button> -->
               <button class="modal-update hidden" type="submit">Update Record</button>
             </div>
           </form>
