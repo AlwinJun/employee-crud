@@ -10,7 +10,7 @@ h2 {
 }
 
 .header {
-  &-notify {
+  &__notify {
     font-size: 1.2rem;
 
     &::after {
@@ -18,32 +18,32 @@ h2 {
     }
   }
 
-  &-user {
+  &__user {
     margin-right: 2rem;
     font-size: 1.3rem;
     font-weight: 400;
     text-transform: capitalize;
   }
 
-  &-icon {
+  &__icon {
     font-size: 1rem;
   }
 }
 
-.action {
+.section-table__action {
   font-size: 1rem;
 }
 
 .modal {
-  .inputs {
+  &__inputs {
     font-size: 0.9rem;
-
-    &-placeholder {
-      font-size: 0.9rem;
-    }
   }
 
-  &-input {
+  &__placeholder {
+    font-size: 0.9rem;
+  }
+
+  &__input {
     font-size: 0.9rem;
   }
 }

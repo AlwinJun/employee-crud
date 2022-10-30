@@ -46,11 +46,13 @@ button:hover {
   }
 }
 
-.action {
-  display: flex;
-  flex-direction: row;
-  gap: 0.8rem;
-  align-items: center;
+.section-table {
+  &__action {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    align-items: center;
+  }
 
   button {
     padding: 0.2rem 0.8rem;
@@ -59,18 +61,18 @@ button:hover {
     border-style: solid;
   }
 
-  &-gap {
+  &__btn-gap {
     width: 2px;
     height: 1.7rem;
     background-color: #ddd;
   }
 
-  &-edit {
+  &__edit {
     border-color: hsl(158, 75%, 45%);
     color: hsl(158, 75%, 45%);
   }
 
-  &-delete {
+  &__delete {
     background-color: hsl(0, 99%, 46%);
     color: #fff;
   }
@@ -81,33 +83,33 @@ button:hover {
     margin: 2.5rem 0 1.5rem;
     display: flex;
     justify-content: flex-end;
-  }
 
-  &-add,
-  &-add-more,
-  &-update {
-    padding: 0.6rem 1.2rem;
-    margin-left: auto;
-    border-radius: 13rem;
-    color: #fff;
-  }
-
-  &-add,
-  &-add-more {
-    background-color: hsl(123, 96%, 40%);
-    transition: all 0.2s linear;
-
-    &:hover {
-      background-color: hsl(123, 96%, 45%);
+    &__add,
+    &__add-more,
+    &__update {
+      padding: 0.6rem 1.2rem;
+      margin-left: auto;
+      border-radius: 13rem;
+      color: #fff;
     }
-  }
 
-  &-update {
-    background-color: hsl(158, 75%, 45%);
-    transition: all 0.2s linear;
+    &__add,
+    &__add-more {
+      background-color: hsl(123, 96%, 40%);
+      transition: all 0.2s linear;
 
-    &:hover {
-      background-color: hsl(158, 78%, 39%);
+      &:hover {
+        background-color: hsl(123, 96%, 45%);
+      }
+    }
+
+    &__update {
+      background-color: hsl(158, 75%, 45%);
+      transition: all 0.2s linear;
+
+      &:hover {
+        background-color: hsl(158, 78%, 39%);
+      }
     }
   }
 }

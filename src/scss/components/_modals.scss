@@ -10,7 +10,7 @@
   height: 100%;
   background-color: hsla(0, 0%, 0%, 0.5);
 
-  &-card {
+  &__card {
     display: flex;
     flex-direction: column;
     padding: 0.4rem 2rem;
@@ -22,7 +22,7 @@
     box-shadow: 0px 5px 15px 0px hsla(0, 0%, 0%, 0.7);
   }
 
-  &-close {
+  &__close {
     align-self: flex-end;
     padding: 0.5rem;
     margin-bottom: 1.5rem;
@@ -35,7 +35,7 @@
     outline: none;
   }
 
-  form {
+  &__form {
     width: min(95%, 22rem);
   }
 
@@ -46,37 +46,37 @@
     gap: 1rem;
   }
 
-  .inputs {
+  &__inputs {
     position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     margin-bottom: 2.1rem;
     //outline: 1px solid red;
-
-    &-placeholder {
-      position: absolute;
-      top: 0.8rem;
-      left: 0.5rem;
-      color: hsl(0, 0%, 53%);
-
-      transition: top 0.2s ease, left 0.2s ease, color 0.2s ease, font-size 0.2s ease;
-    }
-
-    &-outline {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 1.5px;
-      width: 100%;
-      background-color: $clr-accent-primary;
-      transform: scaleX(0.1);
-      opacity: 0;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
   }
 
-  &-input {
+  &__input-placeholder {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.5rem;
+    color: hsl(0, 0%, 53%);
+
+    transition: top 0.2s ease, left 0.2s ease, color 0.2s ease, font-size 0.2s ease;
+  }
+
+  &__input-outline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1.5px;
+    width: 100%;
+    background-color: $clr-accent-primary;
+    transform: scaleX(0.1);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  &__input {
     width: 100%;
     padding: 0.9rem 0.5rem 0.4rem;
     background: hsl(0, 0%, 97%);
@@ -88,15 +88,15 @@
     //outline: 1px solid red;
     outline: none;
 
-    &:focus + .inputs-placeholder,
-    &:valid + .inputs-placeholder {
+    &:focus + .modal__input-placeholder,
+    &:valid + .modal__input-placeholder {
       top: -0.95rem;
       left: 0.3rem;
       font-size: smaller;
       color: $clr-accent-primary;
     }
 
-    &:focus ~ .inputs-outline {
+    &:focus ~ .modal__input-outline {
       opacity: 1;
       transform: scaleX(1);
       transform-origin: center;

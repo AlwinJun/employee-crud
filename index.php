@@ -9,26 +9,32 @@
   <!-- FONT ICONS -->
   <script src="https://kit.fontawesome.com/25c871887e.js" crossorigin="anonymous"></script>
 
+  <!--  Option 1 -->
+  <!-- NOTE:if the site won't update the styles put the style dir in url eg <localhost/form/css/style.css>
+      OR use ctrl + f5  -->
   <link rel="stylesheet" href="dist/style.css">
+
+  <!-- Use this in case option1 won't load properly-->
+  <!-- <link rel="stylesheet" href="css/style.css?version=1"> -->
 
   </style>
 </head>
 
 <body>
   <header class="header">
-    <div class="header-left">
+    <div class="header__left">
       <h1>ALcom</h1>
     </div>
-    <div class="header-right">
-      <button class="header-notif" aria-label="Notification"><i class="fa-solid fa-bell header-notify" data-number="3+"></i></button>
-      <p class="header-user">Admin Alwin</p>
-      <button class="header-icon" aria-label="Profile button"><i class="fa-regular fa-user"></i></button>
+    <div class="header__right">
+      <button class="header__notif" aria-label="Notification"><i class="fa-solid fa-bell header__notify" data-number="3+"></i></button>
+      <p class="header__user">Admin Alwin</p>
+      <button class="header__icon" aria-label="Profile button"><i class="fa-regular fa-user"></i></button>
     </div>
   </header>
   <main>
     <div class="container">
       <section class="section-cta">
-        <h2 class="section-cta-title">
+        <h2 class="section-cta__title">
           Manage <span>Employees</span>
         </h2>
         <!-- ADD, REFREESH, DELETE ALL Button -->
@@ -65,10 +71,10 @@
               <td>120000</td>
               <td>24</td>
               <td>25</td>
-              <td class="action">
-                <button class="action-edit" title="Edit record"><i class="fa-regular fa-pen-to-square"></i></button>
-                <span class="action-gap"></span>
-                <button class="action-delete" title="Delete record"><i class="fa-solid fa-trash-can"></i></button>
+              <td class="section-table__action">
+                <button class="section-table__edit" title="Edit record"><i class="fa-regular fa-pen-to-square"></i></button>
+                <span class="section-table__btn-gap"></span>
+                <button class="section-table__delete" title="Delete record"><i class="fa-solid fa-trash-can"></i></button>
               </td>
             </tr>
             <tr>
@@ -80,10 +86,10 @@
               <td>Salary</td>
               <td>24</td>
               <td>25</td>
-              <td class="action">
-                <button class="action-edit" title="Edit record"><i class="fa-regular fa-pen-to-square"></i></button>
-                <span class="action-gap"></span>
-                <button class="action-delete" title="Delete record"><i class="fa-solid fa-trash-can"></i></button>
+              <td class="section-table__action">
+                <button class="section-table__edit" title="Edit record"><i class="fa-regular fa-pen-to-square"></i></button>
+                <span class="section-table__btn-gap"></span>
+                <button class="section-table__delete" title="Delete record"><i class="fa-solid fa-trash-can"></i></button>
               </td>
             </tr>
             <tr>
@@ -95,10 +101,10 @@
               <td>50000</td>
               <td>24</td>
               <td>25</td>
-              <td class="action">
-                <button class="action-edit" title="Edit record"><i class="fa-regular fa-pen-to-square"></i></button>
-                <span class="action-gap"></span>
-                <button class="action-delete" title="Delete record"><i class="fa-solid fa-trash-can"></i></button>
+              <td class="section-table__action">
+                <button class="section-table__edit" title="Edit record"><i class="fa-regular fa-pen-to-square"></i></button>
+                <span class="section-table__btn-gap"></span>
+                <button class="section-table__delete" title="Delete record"><i class="fa-solid fa-trash-can"></i></button>
               </td>
             </tr>
           </tbody>
@@ -106,41 +112,41 @@
       </section>
     </div>
     <section class="modal hidden">
-      <div class="modal-container">
-        <div class="modal-card">
-          <button class="modal-close">&times;</button>
-          <form action="" method="GET" autocomplete="off">
+      <div class="modal__container">
+        <div class="modal__card">
+          <button class="modal__close">&times;</button>
+          <form action="" method="GET" autocomplete="off" class="modal__form">
             <div class="even-row">
-              <label class="inputs">
-                <input class="modal-input" type="text" name="" value="" required>
-                <span class="inputs-placeholder">First Name</span>
-                <span class="inputs-outline"></span>
+              <label class="modal__inputs">
+                <input class="modal__input" type="text" name="" value="" required>
+                <span class="modal__input-placeholder">First Name</span>
+                <span class="modal__input-outline"></span>
               </label>
-              <label class="inputs">
-                <input class="modal-input" type="text" name="" value="" required>
-                <span class="inputs-placeholder">Last Name</span>
-                <span class="inputs-outline"></span>
+              <label class="modal__inputs">
+                <input class="modal__input" type="text" name="" value="" required>
+                <span class="modal__input-placeholder">First Name</span>
+                <span class="modal__input-outline"></span>
               </label>
             </div>
-            <label class="inputs">
-              <input class="modal-input" type="email" name="" value="" required>
-              <span class="inputs-placeholder">Email</span>
-              <span class="inputs-outline"></span>
+            <label class="modal__inputs">
+              <input class="modal__input" type="text" name="" value="" required>
+              <span class="modal__input-placeholder">First Name</span>
+              <span class="modal__input-outline"></span>
             </label>
-            <label class="inputs">
-              <input class="modal-input" type="text" name="" value="" required>
-              <span class="inputs-placeholder">Job Title</span>
-              <span class="inputs-outline"></span>
+            <label class="modal__inputs">
+              <input class="modal__input" type="text" name="" value="" required>
+              <span class="modal__input-placeholder">First Name</span>
+              <span class="modal__input-outline"></span>
             </label>
-            <label class="inputs">
-              <input class="modal-input" type="text" name="" value="" required>
-              <span class="inputs-placeholder">Salary</span>
-              <span class="inputs-outline"></span>
+            <label class="modal__inputs">
+              <input class="modal__input" type="text" name="" value="" required>
+              <span class="modal__input-placeholder">First Name</span>
+              <span class="modal__input-outline"></span>
             </label>
             <div class="modal-btn">
-              <button class="modal-add" type="submit">Add Employee</button>
-              <!-- <button class="modal-add-more hidden" type="submit">Add More</button> -->
-              <button class="modal-update hidden" type="submit">Update Record</button>
+              <button class="modal-btn__add" type="submit">Add Employee</button>
+              <!-- <button class="modal-btn__add-more hidden" type="submit">Add More</button> -->
+              <button class="modal-btn__update hidden" type="submit">Update Record</button>
             </div>
           </form>
         </div>

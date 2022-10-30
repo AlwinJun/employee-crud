@@ -8,7 +8,7 @@
   background-color: $clr-accent-primary;
   color: #fff;
 
-  &-left {
+  &__left {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -23,17 +23,17 @@
       1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
   }
 
-  &-right {
+  &__right {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  &-notif {
+  &__notif {
     background-color: transparent;
   }
 
-  &-notify {
+  &__notify {
     margin-right: 1.8rem;
     color: #fff;
     position: relative;
@@ -48,12 +48,12 @@
     }
   }
 
-  &-user {
+  &__user {
     margin-right: 0.5rem;
     letter-spacing: 1px;
   }
 
-  &-icon {
+  &__icon {
     padding: 0.5rem 0.7rem;
     color: $clr-accent-primary;
     border-radius: 50%;
