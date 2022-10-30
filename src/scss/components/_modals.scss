@@ -79,7 +79,7 @@
   &__input {
     width: 100%;
     padding: 0.9rem 0.5rem 0.4rem;
-    background: hsl(0, 0%, 97%);
+    background: hsl(0, 0%, 99%);
     color: hsl(0, 0%, 0%);
     border: none;
     border-bottom: 1px solid hsl(0, 0%, 70%);
@@ -89,7 +89,8 @@
     outline: none;
 
     &:focus + .modal__input-placeholder,
-    &:valid + .modal__input-placeholder {
+    //focus class add through JS
+    &.focus + .modal__input-placeholder {
       top: -0.95rem;
       left: 0.3rem;
       font-size: smaller;

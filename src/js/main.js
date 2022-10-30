@@ -7,11 +7,25 @@ const btnEdit = document.querySelector('.section-table__edit');
 const formAdd =  document.querySelector('.modal-btn__add');
 const formAddMore =  document.querySelector('.modal-btn__add-more');
 const formUpdate =  document.querySelector('.modal-btn__update');
+const inputs = document.querySelectorAll('.modal__input')
+
+inputs.forEach(input => {
+  //If input lost focus but has a value
+  input.addEventListener('blur', e => {
+    //Add class name focus 
+    if(e.target.value){
+      e.target.classList.add('focus')
+    }else{
+      e.target.classList.remove('focus')
+    }
+  })
+});
 
 //Show modal
 btnAdd.addEventListener('click', () => {
   modal.classList.remove('hidden');
 })
+
 //Hide modal
 modalClose.addEventListener('click', (e) => {
   modal.classList.add('hidden');

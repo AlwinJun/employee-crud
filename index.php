@@ -115,32 +115,32 @@
       <div class="modal__container">
         <div class="modal__card">
           <button class="modal__close">&times;</button>
-          <form action="" method="GET" autocomplete="off" class="modal__form">
+          <form action="" method="POST" autocomplete="off" class="modal__form">
             <div class="even-row">
               <label class="modal__inputs">
-                <input class="modal__input" type="text" name="" value="" required>
+                <input class="modal__input" type="text" name="">
                 <span class="modal__input-placeholder">First Name</span>
                 <span class="modal__input-outline"></span>
               </label>
               <label class="modal__inputs">
-                <input class="modal__input" type="text" name="" value="" required>
-                <span class="modal__input-placeholder">First Name</span>
+                <input class="modal__input" type="text" name="">
+                <span class="modal__input-placeholder">Last Name</span>
                 <span class="modal__input-outline"></span>
               </label>
             </div>
             <label class="modal__inputs">
-              <input class="modal__input" type="text" name="" value="" required>
-              <span class="modal__input-placeholder">First Name</span>
+              <input class="modal__input" type="email" name="">
+              <span class="modal__input-placeholder">Email</span>
               <span class="modal__input-outline"></span>
             </label>
             <label class="modal__inputs">
-              <input class="modal__input" type="text" name="" value="" required>
-              <span class="modal__input-placeholder">First Name</span>
+              <input class="modal__input" type="text" name="">
+              <span class="modal__input-placeholder">Job Title</span>
               <span class="modal__input-outline"></span>
             </label>
             <label class="modal__inputs">
-              <input class="modal__input" type="text" name="" value="" required>
-              <span class="modal__input-placeholder">First Name</span>
+              <input class="modal__input" type="text" name="">
+              <span class="modal__input-placeholder">Salary</span>
               <span class="modal__input-outline"></span>
             </label>
             <div class="modal-btn">
