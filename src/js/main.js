@@ -32,8 +32,6 @@ modalClose.addEventListener('click', (e) => {
   formAddMore.classList.add('hidden');
   formAdd.classList.remove('hidden');
 
-  // refresh page data when click close button
-  // window.location = window.location;
 })
 
 //Show modal when edit button was click
