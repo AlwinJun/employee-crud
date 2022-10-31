@@ -1,3 +1,29 @@
+<?php include 'server/dbconnection.php';
+
+//Insert Data
+if (isset($_POST['submit'])) {
+  // Get modal form data
+  $fname = mysqli_real_escape_string($conn, $_POST['first_name']);
+  $lname = mysqli_real_escape_string($conn, $_POST['last_name']);
+  $email = mysqli_real_escape_string($conn, $_POST['email']);
+  $title = mysqli_real_escape_string($conn, $_POST['title']);
+  $salary = mysqli_real_escape_string($conn, $_POST['salary']);
+
+  // SQL Satetment
+  $sql = "INSERT INTO employee_table(first_name,last_name,email,job_titile,salary)VAlUES('$fname','$lname','$email','$title','$salary')";
+
+  $result = mysqli_query($conn, $sql);
+
+  if ($result) {
+    header('Location:index.php');
+  } else {
+    echo 'ERROR: ' . mysqli_error($conn);
+  }
+
+  mysqli_close($conn);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +36,7 @@
   <script src="https://kit.fontawesome.com/25c871887e.js" crossorigin="anonymous"></script>
 
   <!--  Option 1 -->
-  <!-- NOTE:if the site won't update the styles put the style dir in url eg <localhost/form/css/style.css>
-      OR use ctrl + f5  -->
+  <!-- NOTE:if the site won't update the styles put the style dir in url eg <localhost/form/css/style.css> OR use ctrl + f5 -->
   <link rel="stylesheet" href="dist/style.css">
 
   <!-- Use this in case option1 won't load properly-->
@@ -118,34 +143,33 @@
           <form action="" method="POST" autocomplete="off" class="modal__form">
             <div class="even-row">
               <label class="modal__inputs">
-                <input class="modal__input" type="text" name="">
+                <input class="modal__input" type="text" name="first_name">
                 <span class="modal__input-placeholder">First Name</span>
                 <span class="modal__input-outline"></span>
               </label>
               <label class="modal__inputs">
-                <input class="modal__input" type="text" name="">
+                <input class="modal__input" type="text" name="last_name">
                 <span class="modal__input-placeholder">Last Name</span>
                 <span class="modal__input-outline"></span>
               </label>
             </div>
             <label class="modal__inputs">
-              <input class="modal__input" type="email" name="">
+              <input class="modal__input" type="email" name="email">
               <span class="modal__input-placeholder">Email</span>
               <span class="modal__input-outline"></span>
             </label>
             <label class="modal__inputs">
-              <input class="modal__input" type="text" name="">
+              <input class="modal__input" type="text" name="title">
               <span class="modal__input-placeholder">Job Title</span>
               <span class="modal__input-outline"></span>
             </label>
             <label class="modal__inputs">
-              <input class="modal__input" type="text" name="">
-              <span class="modal__input-placeholder">Salary</span>
+              <input class="modal__input" type="text" name="salary">
+              <span class="modal__input-placeholder">Salary e.g 90,000</span>
               <span class="modal__input-outline"></span>
             </label>
             <div class="modal-btn">
-              <button class="modal-btn__add" type="submit">Add Employee</button>
-              <!-- <button class="modal-btn__add-more hidden" type="submit">Add More</button> -->
+              <button class="modal-btn__add" type="submit" name="submit">Add Employee</button>
               <button class="modal-btn__update hidden" type="submit">Update Record</button>
             </div>
           </form>
