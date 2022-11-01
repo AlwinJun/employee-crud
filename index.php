@@ -1,29 +1,3 @@
-<?php include 'server/dbconnection.php';
-
-//Insert Data
-if (isset($_POST['submit'])) {
-  // Get modal form data
-  $fname = mysqli_real_escape_string($conn, $_POST['first_name']);
-  $lname = mysqli_real_escape_string($conn, $_POST['last_name']);
-  $email = mysqli_real_escape_string($conn, $_POST['email']);
-  $title = mysqli_real_escape_string($conn, $_POST['title']);
-  $salary = mysqli_real_escape_string($conn, $_POST['salary']);
-
-  // SQL Satetment
-  $sql = "INSERT INTO employee_table(first_name,last_name,email,job_titile,salary)VAlUES('$fname','$lname','$email','$title','$salary')";
-
-  $result = mysqli_query($conn, $sql);
-
-  if ($result) {
-    header('Location:index.php');
-  } else {
-    echo 'ERROR: ' . mysqli_error($conn);
-  }
-
-  mysqli_close($conn);
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -140,7 +114,7 @@ if (isset($_POST['submit'])) {
       <div class="modal__container">
         <div class="modal__card">
           <button class="modal__close">&times;</button>
-          <form action="" method="POST" autocomplete="off" class="modal__form">
+          <form action="server/process.php" method="POST" autocomplete="off" class="modal__form">
             <div class="even-row">
               <label class="modal__inputs">
                 <input class="modal__input" type="text" name="first_name">
@@ -164,8 +138,8 @@ if (isset($_POST['submit'])) {
               <span class="modal__input-outline"></span>
             </label>
             <label class="modal__inputs">
-              <input class="modal__input" type="text" name="salary">
-              <span class="modal__input-placeholder">Salary e.g 90,000</span>
+              <input class="modal__input" type="text" name="salary" title="NO spaces or  specila characters">
+              <span class="modal__input-placeholder">Salary e.g 90000</span>
               <span class="modal__input-outline"></span>
             </label>
             <div class="modal-btn">
