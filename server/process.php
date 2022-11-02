@@ -3,9 +3,12 @@ include 'dbconnection.php';
 
 $fname = $lname = $email = $title = $salary = '';
 $fnameErr = $lnameErr = $emailErr = $titleErr = $salaryErr = '';
-$error = '';
+$required = '';
 //Insert Data
 if (isset($_POST['submit'])) {
+
+  session_start();
+
   $method = strtoupper($_SERVER['REQUEST_METHOD']);
 
   if ($method === 'POST') {
@@ -46,45 +49,47 @@ if (isset($_POST['submit'])) {
         filter_var($title, FILTER_SANITIZE_SPECIAL_CHARS);
       }
 
-      if (filter_var($salary, FILTER_VALIDATE_INT) === false) {
-        echo $salaryErr = 'numbers only';
+      $salary = (float)$salary;
+      if (filter_var($salary, FILTER_VALIDATE_FLOAT) == false) {
+        echo  $salaryErr = 'numbers only';
       } else {
         if (strlen($salary) > 12) {
           echo $salaryErr = 'Must consist of 1-12 numbers only';
         } else {
-          $salary = (float)$salary;
+
           $salary = filter_var($salary, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
         }
       }
 
-
-
-
-
-
       //IF there is no error submit data to DB
       if (empty($fnameErr) && empty($lnameErr) && empty($emailErr) && empty($titleErr) && empty($salaryErr)) {
-        // SQL Satetment
-        // $sql = "INSERT INTO employee_table(first_name,last_name,email,job_titile,salary)
-        //         VAlUES('$fname','$lname','$email','$title','$salary')";
+        //SQL Satetment
+        $sql = "INSERT INTO employee_table(first_name,last_name,email,job_titile,salary)
+                VAlUES('$fname','$lname','$email','$title','$salary')";
 
-        // $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($conn, $sql);
 
-        // if ($result) {
-        // } else {
-        //   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        // }
+        if ($result) {
+          //PRG METHOD -> Prevent FORM RESUBMISSION on browser refresh
+          //Place varibles to SESSION
+          $_SESSION['fname'] = $fname;
+          $_SESSION['lname'] = $lname;
+          $_SESSION['email'] = $email;
+          $_SESSION['title'] = $title;
+          $_SESSION['salary'] = $salary;
 
-        // mysqli_close($conn);
+          //redirect to index.php
+          header('Location:../index.php', true, 303);
+          exit;
+          session_unset();
+        } else {
+          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
 
-        var_dump($fname);
-        var_dump($lname);
-        var_dump($email);
-        var_dump($title);
-        var_dump($salary);
+        mysqli_close($conn);
       }
     } else {
-      echo $error = 'This is a required field';
+      echo $required = 'This is a required field';
     }
   }
 }

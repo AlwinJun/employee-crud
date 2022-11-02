@@ -110,7 +110,7 @@
         </table>
       </section>
     </div>
-    <section class="modal ">
+    <section class="modal hidden">
       <div class="modal__container">
         <div class="modal__card">
           <button class="modal__close">&times;</button>
