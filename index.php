@@ -110,7 +110,7 @@
         </table>
       </section>
     </div>
-    <section class="modal hidden">
+    <section class="modal ">
       <div class="modal__container">
         <div class="modal__card">
           <button class="modal__close">&times;</button>
@@ -138,7 +138,7 @@
               <span class="modal__input-outline"></span>
             </label>
             <label class="modal__inputs">
-              <input class="modal__input" type="text" name="salary" title="NO spaces or  specila characters">
+              <input class="modal__input" type="text" name="salary" title="No spaces or  specila characters">
               <span class="modal__input-placeholder">Salary e.g 90000</span>
               <span class="modal__input-outline"></span>
             </label>
