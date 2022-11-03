@@ -35,3 +35,17 @@
     }
   }
 }
+
+.message {
+  &__insert {
+    width: 97%;
+    margin: 0 auto;
+    background-color: #cff4fc;
+
+    p {
+      padding: 0.6rem;
+      color: hsl(152, 69%, 19%);
+      font-size: r1em;
+    }
+  }
+}

@@ -49,31 +49,11 @@
   &__inputs {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     margin-bottom: 2.1rem;
     //outline: 1px solid red;
-  }
-
-  &__input-placeholder {
-    position: absolute;
-    top: 0.8rem;
-    left: 0.5rem;
-    color: hsl(0, 0%, 53%);
-
-    transition: top 0.2s ease, left 0.2s ease, color 0.2s ease, font-size 0.2s ease;
-  }
-
-  &__input-outline {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 1.5px;
-    width: 100%;
-    background-color: $clr-accent-primary;
-    transform: scaleX(0.1);
-    opacity: 0;
-    transition: transform 0.2s ease, opacity 0.2s ease;
   }
 
   &__input {
@@ -88,6 +68,27 @@
     //outline: 1px solid red;
     outline: none;
 
+    &-placeholder {
+      position: absolute;
+      top: 0.8rem;
+      left: 0.5rem;
+      color: hsl(0, 0%, 53%);
+
+      transition: top 0.2s ease, left 0.2s ease, color 0.2s ease, font-size 0.2s ease;
+    }
+
+    &-outline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1.5px;
+      width: 100%;
+      background-color: $clr-accent-primary;
+      transform: scaleX(0.1);
+      opacity: 0;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
     &:focus + .modal__input-placeholder,
     //focus class add through JS
     &.focus + .modal__input-placeholder {
@@ -101,6 +102,12 @@
       opacity: 1;
       transform: scaleX(1);
       transform-origin: center;
+    }
+
+    &-error {
+      font-size: small;
+      color: red;
+      align-self: flex-start;
     }
   }
 }
