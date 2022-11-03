@@ -1,63 +1,4 @@
-<?php
-include 'server/dbconnection.php';
-session_start();
-
-$fname = $lname = $email = $title = $salary = '';
-$required = '';
-
-//Insert Data
-if (isset($_POST['submit'])) {
-  $method = strtoupper($_SERVER['REQUEST_METHOD']);
-
-  if ($method === 'POST') {
-    // Get data 
-    $fname = $_POST['first_name'];
-    $lname = $_POST['last_name'];
-    $email = $_POST['email'];
-    $title = $_POST['title'];
-    $salary = $_POST['salary'];
-  }
-
-  if (!empty($fname) && !empty($lname) && !empty($email) && !empty($title) && !empty($salary)) {
-    //If there is no empty fields
-    //SQL Satetment
-    $sql = "INSERT INTO employee_table(first_name,last_name,email,job_titile,salary)
-                VAlUES('$fname','$lname','$email','$title','$salary')";
-
-    $result = mysqli_query($conn, $sql);
-
-    if ($result) {
-      //PRG METHOD -> Prevent FORM RESUBMISSION on browser refresh
-      //Place varibles to SESSION
-      $_SESSION['fname'] = $fname;
-      $_SESSION['lname'] = $lname;
-      $_SESSION['email'] = $email;
-      $_SESSION['title'] = $title;
-      $_SESSION['salary'] = $salary;
-      $_SESSION['message'] = '<div class="message__insert">
-                                <p >Data added seuccessfully</p>
-                              </div>';
-
-      header('Location:index.php', true, 303);   //redirect to index.php
-      exit;
-
-      //Free session variables data
-      unset($_SESSION['fname']);
-      unset($_SESSION['lname']);
-      unset($_SESSION['email']);
-      unset($_SESSION['title']);
-      unset($_SESSION['salary']);
-    } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
-
-    //close connection to db
-    mysqli_close($conn);
-  } else {
-    $required = 'There should be no empty fields';
-  }
-}
-?>
+<?php include 'server/process.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -116,6 +57,7 @@ if (isset($_POST['submit'])) {
           if (isset($_SESSION['message'])) {
             echo $_SESSION['message'];
             unset($_SESSION['message']);
+          } else {
           }
           ?>
           <thead>
@@ -185,7 +127,7 @@ if (isset($_POST['submit'])) {
       <div class="modal__container">
         <div class="modal__card">
           <button class="modal__close">&times;</button>
-          <form action="" method="POST" autocomplete="off" class="modal__form">
+          <form action="server/process.php" method="POST" autocomplete="off" class="modal__form">
             <div class="even-row">
               <label class="modal__inputs">
                 <input class="modal__input" type="text" name="first_name">

@@ -37,15 +37,27 @@
 }
 
 .message {
+  width: 97%;
+  margin: 0 auto;
+
+  p {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
   &__insert {
-    width: 97%;
-    margin: 0 auto;
-    background-color: #cff4fc;
+    background-color: hsl(191, 88%, 90%);
 
     p {
-      padding: 0.6rem;
       color: hsl(152, 69%, 19%);
-      font-size: r1em;
+    }
+  }
+
+  &__required {
+    background-color: hsl(355, 70%, 91%);
+
+    p {
+      color: #8f313a;
     }
   }
 }
