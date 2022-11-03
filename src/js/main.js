@@ -38,6 +38,7 @@ modalClose.addEventListener('click', (e) => {
 btnEdit.addEventListener('click', () => {
   modal.classList.remove('hidden');
   formAdd.classList.add('hidden');
-  formUpdate.classList.remove('hidden');
+  formUpdate.classsList.remove('hidden');
 })
 
+//VALIDATION
