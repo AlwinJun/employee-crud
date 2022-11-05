@@ -1,0 +1,142 @@
+@use '../abstracts/' as *;
+
+.form {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(90%, 35rem);
+    margin: 2rem auto 0;
+  }
+
+  &__card {
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 13px;
+    //border-top: 5px solid $clr-accent-primary;
+    box-shadow: 0px 5px 15px 0px hsla(0, 0%, 0%, 0.7);
+  }
+
+  #form-add {
+    margin: auto;
+    padding: 2rem 1.5rem;
+  }
+
+  &__even-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+
+  &__inputs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2.1rem;
+    //outline: 1px solid red;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.9rem 0.5rem 0.25rem;
+    background: hsl(0, 0%, 99%);
+    color: hsl(0, 0%, 0%);
+    border: none;
+    border-bottom: 1px solid hsl(0, 0%, 70%);
+    border-radius: 5px 5px 0 0;
+    appearance: none;
+    //outline: 1px solid red;
+    outline: none;
+
+    &-placeholder {
+      position: absolute;
+      top: 0.8rem;
+      left: 0;
+      color: hsl(0, 0%, 53%);
+
+      transition: top 300ms ease, left 300ms ease, color 300ms ease, font-size 300ms ease;
+    }
+
+    &-outline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1.5px;
+      width: 100%;
+      background-color: $clr-accent-primary;
+      transform: scaleX(0.1);
+      opacity: 0;
+      transition: transform 300ms ease-in, opacity 300ms ease-in;
+    }
+
+    &:focus + .form__input-placeholder,
+    //focus class add through JS
+    &.focus + .form__input-placeholder {
+      top: -0.95rem;
+      left: 0.3rem;
+      font-size: smaller;
+      color: $clr-accent-primary;
+    }
+
+    &:focus ~ .form__input-outline {
+      opacity: 1;
+      transform: scaleX(1);
+      transform-origin: center;
+    }
+  }
+
+  &-error {
+    font-size: small;
+    color: red;
+    align-self: flex-start;
+  }
+
+  // Update page form
+  #form-update {
+    margin: auto;
+    padding: 2rem 1.5rem;
+
+    // Make the placeholder and outline focus/active by default since they have a value
+    .form__input-placeholder.update {
+      top: -0.95rem;
+      left: 0.3rem;
+      font-size: smaller;
+      color: $clr-accent-primary;
+    }
+
+    .form__input-outline.update {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+}
+
+// Process data message
+.message {
+  width: 100%;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+
+  p {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  &__insert {
+    background-color: hsl(191, 88%, 90%);
+
+    p {
+      color: hsl(152, 69%, 19%);
+    }
+  }
+
+  &__required {
+    background-color: hsl(355, 70%, 91%);
+
+    p {
+      color: #8f313a;
+    }
+  }
+}

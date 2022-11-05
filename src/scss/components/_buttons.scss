@@ -1,12 +1,23 @@
 @use '../abstracts/' as *;
 
+button a {
+  &:active,
+  &:visited {
+    color: white;
+  }
+}
+
 button:hover {
   cursor: pointer;
 }
 
+button:active {
+  transform: scale(0.9);
+}
+
 .btns {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.8rem;
 
@@ -17,16 +28,6 @@ button:hover {
 
     i {
       margin-right: 0.4rem;
-    }
-
-    &-refresh {
-      margin-right: auto;
-      background-color: hsl(188, 83%, 43%);
-      transition: all 0.2s linear;
-
-      &:hover {
-        background-color: hsl(188, 95%, 33%);
-      }
     }
 
     &-add {
@@ -70,6 +71,12 @@ button:hover {
   &__edit {
     border-color: hsl(158, 75%, 45%);
     color: hsl(158, 75%, 45%);
+
+    a:active,
+    a:visited {
+      color: hsl(158, 75%, 45%);
+      background-color: hsl(158, 75%, 45%);
+    }
   }
 
   &__delete {
@@ -78,23 +85,20 @@ button:hover {
   }
 }
 
-.modal {
+.form {
   &-btn {
-    margin: 2.5rem 0 1.5rem;
     display: flex;
     justify-content: flex-end;
 
     &__add,
-    &__add-more,
     &__update {
-      padding: 0.6rem 1.2rem;
+      padding: 0.8rem 1.3rem;
       margin-left: auto;
       border-radius: 13rem;
       color: #fff;
     }
 
-    &__add,
-    &__add-more {
+    &__add {
       background-color: hsl(123, 96%, 40%);
       transition: all 0.2s linear;
 
@@ -110,6 +114,24 @@ button:hover {
       &:hover {
         background-color: hsl(158, 78%, 39%);
       }
+    }
+  }
+
+  &__back {
+    width: 7rem;
+    min-height: 2.5rem;
+    border-radius: 10rem;
+    background-color: transparent;
+    font-size: 5rem;
+    text-shadow: 0px 7px 10px #01010a;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    a,
+    a:active,
+    a:visited {
+      color: $clr-accent-primary;
     }
   }
 }

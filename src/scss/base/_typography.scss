@@ -29,21 +29,22 @@ h2 {
     font-size: 1rem;
   }
 }
+th {
+  font-size: 1rem;
+}
+
+td {
+  font-size: 0.875rem;
+}
 
 .section-table__action {
   font-size: 1rem;
 }
 
-.modal {
-  &__inputs {
-    font-size: 0.9rem;
-  }
-
-  &__placeholder {
-    font-size: 0.9rem;
-  }
-
+.form {
+  &__inputs,
+  &__placeholder,
   &__input {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
