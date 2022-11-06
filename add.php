@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
     // close connection to db
     $conn->close();
   } else {
-    $_SESSION['required'] = '<div class="message message__required">
+    $_SESSION['message'] = '<div class="message message__required">
                                 <p >Data insertion failed.Kindly fill up all fields!</p>
                               </div>';
   }
@@ -79,10 +79,6 @@ if (isset($_POST['submit'])) {
       if (isset($_SESSION['message'])) {
         echo $_SESSION['message'];
         unset($_SESSION['message']);
-      }
-      if (isset($_SESSION['required'])) {
-        echo $_SESSION['required'];
-        unset($_SESSION['required']);
       }
       ?>
       <form id="form-add" action="" method="POST" autocomplete="off">

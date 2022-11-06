@@ -17,6 +17,4 @@ inputs.forEach(input => {
   })
 });
 
-
-
 //VALIDATION

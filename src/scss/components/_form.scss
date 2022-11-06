@@ -139,4 +139,12 @@
       color: #8f313a;
     }
   }
+
+  &__required {
+    background-color: hsl(355, 70%, 91%);
+
+    p {
+      color: #8f313a;
+    }
+  }
 }

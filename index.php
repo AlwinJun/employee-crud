@@ -2,6 +2,7 @@
 include 'inc/dbconnection.php';
 include 'inc/header.php';
 ?>
+
 <div class="container">
   <section class="section-cta">
     <h2 class="section-cta__title">
@@ -24,14 +25,10 @@ include 'inc/header.php';
     <table>
       <!-- POP UP MESSAGE once server done processing -->
       <?php
-
+      session_start();
       if (isset($_SESSION['message'])) {
         echo $_SESSION['message'];
         unset($_SESSION['message']);
-      }
-      if (isset($_SESSION['required'])) {
-        echo $_SESSION['required'];
-        unset($_SESSION['required']);
       }
       ?>
       <thead>
@@ -66,13 +63,23 @@ include 'inc/header.php';
             <td><?php echo $row['job_titile']; ?></td>
             <td><?php echo $row['salary']; ?></td>
             <td><?php echo $row['created_at']; ?></td>
-            <td><?php echo $row['updated_at']; ?></td>
+            <td>
+              <?php if (empty($row['updated_at'])) {
+                echo '--';
+              } else {
+                echo $row['updated_at'];
+              }
+              ?>
+            </td>
             <td class="section-table__action">
               <a href="update.php?id=<?php echo $row['id']; ?>">
                 <button type="button" class="section-table__edit" name="edit" title="Edit record"><i class="fa-regular fa-pen-to-square"></i></button>
               </a>
               <span class="section-table__btn-gap"></span>
-              <button class="section-table__delete" title="Delete record"><i class="fa-solid fa-trash-can"></i></button>
+              <form action="delete.php" method="POST">
+                <input type="hidden" name="delete_id" value=" <?php echo $row['id']; ?>">
+                <button class="section-table__delete" name="delete" title="Delete record"><i class="fa-solid fa-trash-can"></i></button>
+              </form>
             </td>
           </tr>
         <?php endforeach;

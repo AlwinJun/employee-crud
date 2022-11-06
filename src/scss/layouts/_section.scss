@@ -2,13 +2,15 @@
 
 .section {
   &-cta {
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
   }
 
   &-table {
+    width: 97%;
+    margin: auto;
     table {
-      width: 97%;
-      margin: 0 auto 5rem;
+      width: 100%;
+      margin-bottom: 5rem;
       border-collapse: collapse;
       border-spacing: 0;
       border: 1px solid #ddd;

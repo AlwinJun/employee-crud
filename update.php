@@ -13,6 +13,7 @@ function sanitize($dbconn, $input_data)
 }
 
 if (isset($_POST['submit'])) {
+  session_start();
   $method = strtoupper($_SERVER['REQUEST_METHOD']);
 
   if ($method === 'POST') {
@@ -52,10 +53,10 @@ if (isset($_POST['submit'])) {
       echo "Error:   " . $sql . "<br>" . mysqli_error($conn);
     }
 
-    $conn->close();
+    //$conn->close();
   } else {
-    $_SESSION['required'] = '<div class="message message__required">
-                                <p >Data insertion failed.Kindly fill up all fields!</p>
+    $_SESSION['message'] = '<div class="message message__required">
+                                <p >Failed to update data.Kindly fill up all fields!</p>
                               </div>';
     header('Location:index.php');
   }
@@ -68,8 +69,6 @@ if (isset($_POST['submit'])) {
 <section class="form">
   <div class="form__container">
     <div class="form__card">
-      <?php
-      ?>
       <form id="form-update" action="" method="POST" autocomplete="off">
         <div class="form__even-row">
           <label class="form__inputs left">
