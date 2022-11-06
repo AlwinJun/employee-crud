@@ -12,3 +12,48 @@ body {
 .hidden {
   display: none;
 }
+
+// Show process message
+.message {
+  width: 100%;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+
+  p {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  &__insert {
+    background-color: hsl(191, 88%, 90%);
+
+    p {
+      color: hsl(152, 69%, 19%);
+    }
+  }
+
+  &__required {
+    background-color: hsl(355, 70%, 91%);
+
+    p {
+      color: hsl(354, 49%, 38%);
+    }
+  }
+
+  &__update,
+  &__delete-all {
+    background-color: hsl(216, 100%, 91%);
+
+    p {
+      color: hsl(216, 90%, 31%);
+    }
+  }
+
+  &__delete {
+    background-color: hsl(46, 100%, 90%);
+
+    p {
+      color: hsl(45, 95%, 16%);
+    }
+  }
+}

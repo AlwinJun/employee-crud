@@ -112,39 +112,3 @@
     }
   }
 }
-
-// Process data message
-.message {
-  width: 100%;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-
-  p {
-    padding: 0.8rem;
-    font-size: 1rem;
-  }
-
-  &__insert {
-    background-color: hsl(191, 88%, 90%);
-
-    p {
-      color: hsl(152, 69%, 19%);
-    }
-  }
-
-  &__required {
-    background-color: hsl(355, 70%, 91%);
-
-    p {
-      color: #8f313a;
-    }
-  }
-
-  &__required {
-    background-color: hsl(355, 70%, 91%);
-
-    p {
-      color: #8f313a;
-    }
-  }
-}

@@ -19,7 +19,6 @@ button:active {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 0.8rem;
 
   .btn {
     padding: 0.6rem 1.2rem;
@@ -33,16 +32,24 @@ button:active {
     &-add {
       background-color: hsl(123, 96%, 40%);
       transition: all 0.2s linear;
+      margin-right: 1.2rem;
 
       &:hover {
         background-color: hsl(123, 96%, 45%);
       }
     }
 
-    &-delete {
+    &-delete-all {
       background-color: hsl(0, 99%, 46%);
       color: #fff;
       transition: all 0.2s linear;
+    }
+
+    &-delete-icon {
+      padding: 1rem;
+      background-color: transparent;
+      color: hsl(0, 100%, 50%);
+      font-size: 2.8rem;
     }
   }
 }
