@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
-      $_SESSION['message'] = '<div class="message message__insert">
+      $_SESSION['message'] = '<div class="message message__update">
                                 <p >Data updated seuccessfully</p>
                               </div>';
       header('Location:index.php');
