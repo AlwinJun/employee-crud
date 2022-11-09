@@ -15,8 +15,7 @@ include 'inc/header.php';
           <i class="fa-solid fa-plus"></i>Add Employee
         </button>
       </a>
-      <button class="btn btn-delete-all" type="submit" title="Delete all table records"><i class="fa-solid fa-minus"></i>Delete All</button>
-      <button class="btn btn-delete-icon hidden"><i class="fa-solid fa-trash"></i></button>
+      <button class="btn btn-delete-all"><i class="fa-solid fa-trash"></i></button>
     </div>
   </section>
   <section class="modal-warning hidden">
@@ -24,7 +23,7 @@ include 'inc/header.php';
       <div class="modal-warning__content">
         <i class="fa-solid fa-triangle-exclamation"></i>
         <h2 class="modal-warning__header">Are you sure?</h2>
-        <p class="modal-warning__text">Clicking "YES" will delete all data form this table!</p>
+        <p class="modal-warning__text">Clicking "YES" will <strong>delete all</strong> data form this table!</p>
         <form class="modal-warning__btn" action="delete.php" method="POST">
           <button type="button" id="cancel">Cancel</button>
           <button type="submit" name="delete_all">Yes, delete all!</button>

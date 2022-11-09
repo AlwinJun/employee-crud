@@ -14,20 +14,9 @@ inputs.forEach(input => {
   })
 });
 
-//Show delete all icon on hover
-btnDeleteAll.addEventListener('mouseover', () =>{
-  document.querySelector('.btn-delete-icon').classList.remove('hidden');
-  btnDeleteAll.classList.add('hidden');
-})
-
-// Show delete all button text on mouse leave
-btnDeleteAll.addEventListener('mouseleave', () =>{
-  document.querySelector('.btn-delete-icon').classList.add('hidden');
-  btnDeleteAll.classList.remove('hidden');
-})
 
 //Show warning modal
-document.querySelector('.btn-delete-icon').addEventListener('click', ()=>{
+btnDeleteAll.addEventListener('click', ()=>{
    document.querySelector('.modal-warning').classList.remove('hidden');
 })
 
