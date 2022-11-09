@@ -33,6 +33,10 @@ button:active {
       &:hover {
         background-color: hsl(123, 96%, 45%);
       }
+
+      i {
+        margin-right: 0.2rem;
+      }
     }
 
     &-delete-all {

@@ -12,8 +12,7 @@ include 'inc/header.php';
     <div class="btns">
       <a href="add.php">
         <button class="btn btn-add" type="submit" title="Add new employee">
-          <i class="fa-solid fa-plus"></i>Add Employee
-        </button>
+          <i class="fa-solid fa-plus"></i>Add Employee</button>
       </a>
       <button class="btn btn-delete-all"><i class="fa-solid fa-trash"></i></button>
     </div>

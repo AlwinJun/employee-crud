@@ -41,6 +41,30 @@ td {
   font-size: 1rem;
 }
 
+.modal {
+  &-warning {
+    i {
+      color: red;
+      font-size: 6rem;
+      margin-bottom: 1.3rem;
+    }
+
+    &__header {
+      color: black;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 0.8rem;
+    }
+
+    &__text {
+      margin-bottom: 1.5rem;
+      color: #444;
+      font-size: 0.9rem;
+    }
+  }
+}
+
 .form {
   &__inputs,
   &__placeholder,
